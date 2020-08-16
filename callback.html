@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <button style="font-size:40px;" id="submitButton" type="button">Küldés</button>
+    <script>
+        /*const buttonClickHandler = function(){
+            //console.log("Katt");
+            alert("Katt");
+        }
+        const button = document.querySelector("#submitButton");
+        button.addEventListener("click", buttonClickHandler);
+        alert("Utolsó utasítás");*/
+
+        const myPromise = new Promise((resolve, reject) =>{
+            setTimeout( () => {
+                resolve({name:"Piri"});
+            }, 3000);
+        });
+
+        myPromise.then(
+            data => console.log(data),
+            err => console.error(err)
+        );
+
+    </script>
+
+</body>
+</html>
